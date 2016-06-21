@@ -1,0 +1,28 @@
+<div class="row">
+  <!-- Not implemented on tutorial -->
+  <div class="col-md-8">
+    <div style="height: 300px; overflow-y: auto;">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">send email Users</div>
+
+        <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>email</th>
+              <th>body</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= @user_email.email %></td>
+              <td><%= @user_email.body.html_safe%></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <%= link_to "Back", user_emails_path,class:"btn btn-info"%>
+    </div>
+  </div>
+</div>

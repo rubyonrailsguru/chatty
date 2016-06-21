@@ -1,0 +1,25 @@
+<div class="col-md-12">
+  <div style="height: 300px; overflow-y: auto;">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Registered Users</div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @user_emails.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= link_to "details",user_email_path(user),class: "btn btn-success" %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <%= link_to "send email", new_user_email_path ,class:"btn btn-primary"%>
+  </div>
+</div>
